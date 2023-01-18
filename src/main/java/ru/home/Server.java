@@ -21,7 +21,7 @@ public class Server {
                      PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
                      BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
-                    System.out.println("Клиент " + clientSocket.getInetAddress().getHostName() + " подключен");
+                    System.out.println("Клиент " + clientSocket.getPort() + " подключен");
 
                     out.println("Ответ от сервера");
                     System.out.println(in.readLine());
